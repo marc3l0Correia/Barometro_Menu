@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0B0D">
+<title>Barómetro Ementa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar">
+  <div class="wrap">
+    <div class="bar-top">
+      <span class="bar-name">Bar<span class="o">(Ô)</span>metro</span>
+      <div class="langs" role="group" aria-label="Language">
+        <button class="lang" type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button class="lang" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang" type="button" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang" type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <nav class="chips" id="chips" aria-label="Menu"></nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <svg class="mark" viewBox="-12 0 424 214" role="img" aria-label="Barometer symbol">
+      <path class="arc" d="M2 197A198 198 0 0 1 398 197"/>
+      <path class="arc inner" d="M28 197A172 172 0 0 1 372 197"/>
+      <line class="tick" x1="63.7" y1="169.9" x2="54.8" y2="168.1"/>
+      <line class="tick" x1="68.7" y1="151.5" x2="60.2" y2="148.5"/>
+      <line class="tick major" x1="89.5" y1="140.7" x2="68.1" y2="129.8"/>
+      <line class="tick" x1="86.0" y1="117.5" x2="78.6" y2="112.4"/>
+      <line class="tick" x1="97.9" y1="102.6" x2="91.3" y2="96.5"/>
+      <line class="tick" x1="111.8" y1="89.6" x2="106.1" y2="82.6"/>
+      <line class="tick major" x1="135.2" y1="91.3" x2="122.7" y2="70.8"/>
+      <line class="tick" x1="144.3" y1="69.6" x2="140.7" y2="61.4"/>
+      <line class="tick" x1="162.3" y1="63.2" x2="159.8" y2="54.6"/>
+      <line class="tick" x1="181.0" y1="59.3" x2="179.7" y2="50.4"/>
+      <line class="tick major" x1="200.0" y1="73.0" x2="200.0" y2="49.0"/>
+      <line class="tick" x1="219.0" y1="59.3" x2="220.3" y2="50.4"/>
+      <line class="tick" x1="237.7" y1="63.2" x2="240.2" y2="54.6"/>
+      <line class="tick" x1="255.7" y1="69.6" x2="259.3" y2="61.4"/>
+      <line class="tick major" x1="264.8" y1="91.3" x2="277.3" y2="70.8"/>
+      <line class="tick" x1="288.2" y1="89.6" x2="293.9" y2="82.6"/>
+      <line class="tick" x1="302.1" y1="102.6" x2="308.7" y2="96.5"/>
+      <line class="tick" x1="314.0" y1="117.5" x2="321.4" y2="112.4"/>
+      <line class="tick major" x1="310.5" y1="140.7" x2="331.9" y2="129.8"/>
+      <line class="tick" x1="331.3" y1="151.5" x2="339.8" y2="148.5"/>
+      <line class="tick" x1="336.3" y1="169.9" x2="345.2" y2="168.1"/>
+      <line class="base" x1="14" y1="197" x2="70" y2="197"/><line class="base" x1="330" y1="197" x2="386" y2="197"/>
+      <path class="gem" d="M2 187Q2 197 12 197Q2 197 2 207Q2 197 -8 197Q2 197 2 187Z"/><path class="gem" d="M398 187Q398 197 408 197Q398 197 398 207Q398 197 388 197Q398 197 398 187Z"/>
+      <polygon class="needle" id="needle" points="0,-125 -7,-8 0,5 7,-8" transform="translate(200 197) rotate(28)"/>
+    </svg>
+    <div class="hero-text">
+      <p class="eyebrow" id="tagline"></p>
+      <h1 id="title">Bar<span class="o">(Ô)</span>metro</h1>
+      <p class="sub" id="sub"></p>
+      <p class="hint" id="hint"></p>
+    </div>
+  </header>
+
+  <section class="specials" id="specials"></section>
+  <div id="menu"></div>
+
+  <footer class="foot">
+    <p class="name-foot">Bar<span class="o">(Ô)</span>metro</p>
+    <p id="vat"></p>
+  </footer>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+  <button class="sheet-close" id="sheet-close" type="button" aria-label="Close">&times;</button>
+  <div class="photo">
+    <div id="photo-art"></div>
+    <img id="photo-img" alt="" hidden>
+  </div>
+  <div class="sheet-meta">
+    <h3 id="sheet-title"></h3>
+    <span class="price" id="sheet-price"></span>
+  </div>
+  <p class="sheet-desc" id="sheet-desc" hidden></p>
+  <p class="sheet-cap" id="sheet-cap"></p>
+</div>
+
+
+<script src="art.js"></script>
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
