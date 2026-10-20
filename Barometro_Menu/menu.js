@@ -38,9 +38,9 @@ var UI = {
 };
 
 var SPECIALS = [
-  it(t('Cachorro Especial', 'Special Hot Dog', 'Hot-dog spécial', 'Perrito caliente especial'), '3,50', A.hotdog(),
+  it(t('Cachorro Especial', 'Special Hot Dog', 'Hot-dog spécial', 'Perrito caliente especial'), '7,00', A.hotdog(),
     t('Com a salsicha do Leandro.', "Made with Leandro's sausage.", 'Avec la saucisse de Leandro.', 'Con la salchicha de Leandro.')),
-  it(t('Hambúrguer Especial', 'Special Burger', 'Burger spécial', 'Hamburguesa especial'), '5,50', A.burger(),
+  it(t('Hambúrguer Especial', 'Special Burger', 'Burger spécial', 'Hamburguesa especial'), '7,00', A.burger(),
     t('Receita da casa.', 'House recipe.', 'Recette de la maison.', 'Receta de la casa.'))
 ];
 
